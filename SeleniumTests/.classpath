@@ -87,5 +87,6 @@
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/selenium-safari-driver-4.10.0.jar"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/selenium-support-4.10.0-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/selenium-support-4.10.0.jar"/>
+	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/slf4j-simple-2.0.7.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
