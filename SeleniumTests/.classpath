@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <classpath>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" path="test"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/lib/async-http-client-2.12.3.jar"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/lib/async-http-client-netty-utils-2.12.3.jar"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/lib/auto-common-1.2.1.jar"/>
@@ -83,6 +84,11 @@
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/selenium-support-4.10.0-sources.jar"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/selenium-java-4/selenium-support-4.10.0.jar"/>
 	<classpathentry kind="lib" path="/Users/earlharris/git/SeleniumTests/SeleniumTests/library/slf4j-simple-2.0.7.jar"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
