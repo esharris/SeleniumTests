@@ -2,10 +2,13 @@ package newpackage;
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.List;
+
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 
 public abstract class TestBrowser {
 
@@ -62,4 +65,32 @@ public abstract class TestBrowser {
 				driver.findElement(By.className("radiobutton")).getText());
 	}
 
+	@Test
+	public void testNameDemo2() {
+		driver.get("http://demo.guru99.com/test/ajax.html");
+		List<WebElement> elements = driver.findElements(By.name("name"));
+		assertEquals(2, elements.size());
+		String[] expected = { "Yes", "No" };
+		for (int i = 0; i < elements.size(); i++) {
+			assertEquals(expected[i], elements.get(i).getAttribute("value"));
+		}
+	}
+
+	@Test
+	public void testForm() {
+		String baseUrl = "https://demo.guru99.com/test/login.html";
+		driver.get(baseUrl);
+
+		// Get the WebElement corresponding to the Email Address(TextField)
+		WebElement email = driver.findElement(By.id("email"));
+
+		// Get the WebElement corresponding to the Password Field
+		WebElement password = driver.findElement(By.name("passwd"));
+
+		email.sendKeys("abcd@gmail.com");
+		password.sendKeys("abcdefghlkjl");
+
+		assertEquals("abcd@gmail.com", email.getAttribute("value"));
+		assertEquals("abcdefghlkjl", password.getAttribute("value"));
+	}
 }

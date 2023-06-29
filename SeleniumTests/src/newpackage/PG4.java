@@ -11,6 +11,10 @@ public class PG4 {
 		driver.get("http://demo.guru99.com/selenium/deprecated.html");
 		driver.switchTo().frame("classFrame");
 		driver.findElement(By.linkText("Deprecated")).click();
+		/**
+		 * I don't know how to get information about the web page loaded into the
+		 * current frame.
+		 */
 		driver.close();
 	}
 }
