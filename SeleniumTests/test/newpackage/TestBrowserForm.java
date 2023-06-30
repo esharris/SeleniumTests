@@ -4,6 +4,7 @@ import static org.junit.Assert.assertEquals;
 
 import java.time.Duration;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
@@ -17,17 +18,22 @@ public abstract class TestBrowserForm extends TestBrowserBase {
 
 	private static final String EXPECTED_OUTPUT = "Successfully Logged in...";
 
+	private WebElement email;
+	private WebElement password;
+
 	public TestBrowserForm() {
 		super();
 	}
 
+	@BeforeEach
+	public void initEach() {
+		driver.get(BASE_URL);
+		email = driver.findElement(By.id("email"));
+		password = driver.findElement(By.name("passwd"));
+	}
+
 	@Test
 	public void testForm() {
-		driver.get(BASE_URL);
-
-		final WebElement email = driver.findElement(By.id("email"));
-		final WebElement password = driver.findElement(By.name("passwd"));
-
 		email.sendKeys(EMAIL_INPUT);
 		password.sendKeys(PASSWORD_INPUT);
 
@@ -36,6 +42,7 @@ public abstract class TestBrowserForm extends TestBrowserBase {
 
 		email.clear();
 		password.clear();
+
 		assertEquals("", email.getAttribute("value"));
 		assertEquals("", password.getAttribute("value"));
 
@@ -46,11 +53,6 @@ public abstract class TestBrowserForm extends TestBrowserBase {
 	 */
 	@Test
 	public void testFormClick() {
-		driver.get(BASE_URL);
-
-		final WebElement email = driver.findElement(By.id("email"));
-		final WebElement password = driver.findElement(By.name("passwd"));
-
 		final WebElement login = driver.findElement(By.id("SubmitLogin"));
 
 		email.sendKeys(EMAIL_INPUT);
@@ -66,10 +68,6 @@ public abstract class TestBrowserForm extends TestBrowserBase {
 	 */
 	@Test
 	public void testFormSubmit() {
-
-		driver.get(BASE_URL);
-		driver.findElement(By.id("email")).sendKeys(EMAIL_INPUT);
-		driver.findElement(By.name("passwd")).sendKeys(PASSWORD_INPUT);
 		driver.findElement(By.id("SubmitLogin")).submit();
 
 		/**

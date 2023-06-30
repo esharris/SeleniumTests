@@ -12,7 +12,6 @@ public abstract class TestBrowserMyClass extends TestBrowserBase {
 
 	@Test
 	public void testAlertBox() {
-
 		driver.get(BASE_URL);
 
 		driver.findElement(By.cssSelector("input[value=\"Go!\"]")).click();
