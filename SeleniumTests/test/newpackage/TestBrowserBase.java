@@ -1,18 +1,18 @@
 package newpackage;
 
-import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.AfterAll;
 import org.openqa.selenium.WebDriver;
 
 public class TestBrowserBase {
 
-	protected WebDriver driver;
+	protected static WebDriver driver;
 
 	public TestBrowserBase() {
 		super();
 	}
 
-	@AfterEach
-	public void termEach() {
+	@AfterAll
+	public static void termAll() {
 		driver.close();
 	}
 

@@ -1,12 +1,12 @@
 package newpackage;
 
-import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class TestFirefoxMyClass extends TestBrowserMyClass {
 
-	@BeforeEach
-	public void initEach() {
+	@BeforeAll
+	public static void initAll() {
 		driver = new FirefoxDriver();
 	}
 }
