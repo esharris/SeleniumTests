@@ -15,6 +15,14 @@ public class PG4 {
 		 * I don't know how to get information about the web page loaded into the
 		 * current frame.
 		 */
+		// debug
+		driver.switchTo().defaultContent();
+		WebDriver frame = driver.switchTo().frame("classFrame");
+		System.out.println(frame.getCurrentUrl());
+		System.out.println(frame.getTitle());
+		System.out.println(frame.getPageSource());
+		System.out.println(frame.getWindowHandle());
+		// debug
 		driver.close();
 	}
 }

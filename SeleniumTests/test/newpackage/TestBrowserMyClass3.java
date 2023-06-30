@@ -10,7 +10,7 @@ public abstract class TestBrowserMyClass3 extends TestBrowserBase {
 	private static final String BASE_URL = "http://demo.guru99.com/test/link.html";
 
 	@Test
-	void testLinkTest() {
+	void testLink() {
 		driver.get(BASE_URL);
 
 		/**
