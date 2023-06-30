@@ -26,7 +26,7 @@ public abstract class TestBrowserForm extends TestBrowserBase {
 	}
 
 	@BeforeEach
-	public void initEach() {
+	public void setUp() {
 		driver.get(BASE_URL);
 		email = driver.findElement(By.id("email"));
 		password = driver.findElement(By.name("passwd"));

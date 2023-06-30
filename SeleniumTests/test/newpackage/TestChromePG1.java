@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestChromePG1 extends TestBrowserPG1 {
 
 	@BeforeAll
-	public static void initAll() {
+	public static void setUpBeforeClass() {
 		driver = new ChromeDriver();
 	}
 }

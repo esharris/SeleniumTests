@@ -6,7 +6,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 public class TestFirefoxForm2 extends TestBrowserForm2 {
 
 	@BeforeAll
-	public static void initAll() {
+	public static void setUpBeforeClass() {
 		driver = new FirefoxDriver();
 	}
 }

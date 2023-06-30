@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class TestChromeForm2 extends TestBrowserForm2 {
 
 	@BeforeAll
-	public static void initAll() {
+	public static void setUpBeforeClass() {
 		driver = new ChromeDriver();
 	}
 }

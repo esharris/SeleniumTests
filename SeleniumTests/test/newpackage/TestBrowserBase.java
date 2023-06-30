@@ -12,7 +12,7 @@ public class TestBrowserBase {
 	}
 
 	@AfterAll
-	public static void termAll() {
+	public static void tearDownAfterClass() {
 		driver.close();
 	}
 

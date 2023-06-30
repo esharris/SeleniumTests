@@ -5,7 +5,7 @@ import static org.junit.Assert.assertEquals;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 
-class TestBrowserMyClass3 extends TestBrowserBase {
+public abstract class TestBrowserMyClass3 extends TestBrowserBase {
 
 	private static final String BASE_URL = "http://demo.guru99.com/test/link.html";
 
