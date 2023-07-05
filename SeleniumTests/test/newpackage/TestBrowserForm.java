@@ -8,6 +8,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.firefox.FirefoxDriver;
 
 public abstract class TestBrowserForm extends TestBrowserBase {
 
@@ -73,7 +74,9 @@ public abstract class TestBrowserForm extends TestBrowserBase {
 		/**
 		 * Firefox requires a wait to work properly.
 		 */
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		if (driver instanceof FirefoxDriver) {
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(3));
+		}
 		assertEquals(EXPECTED_OUTPUT, driver.findElement(By.className("error-copy")).getText());
 
 	}
